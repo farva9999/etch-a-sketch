@@ -32,8 +32,8 @@ button{
 
 .container{
     display: grid;
-    grid-template-columns: var(--gridheight) var(--gridheight) var(--gridheight) var(--gridheight);
-    grid-template-rows: var(--gridwidth) var(--gridwidth) var(--gridwidth) var(--gridwidth);
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(4, 150px);
     gap: var(--gridgap) var(--gridgap);
     justify-content: center;
 }

@@ -39,10 +39,10 @@ button{
 }
 
 .grid-item{
-    border: 10px solid lightskyblue;
+    border: 1px solid lightskyblue;
     display:flex;
     justify-content: center;
-    transition: 0.5s;
+    transition: 0.1s;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 

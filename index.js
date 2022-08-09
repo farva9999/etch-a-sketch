@@ -5,13 +5,14 @@ let gridSlider = document.getElementById('gridSlider');
 let eraseBtn = document.getElementById('eraseGridButton');
 let parentDiv = document.querySelector('.container');
 let gridSizeDisplayText = document.getElementById('gridSizeText');
+let colorPicker = document.getElementById('colorPicker');
 
 
 //get listeners
 gridCreateBtn.addEventListener('click', createGrid);
-
 eraseBtn.addEventListener('click', eraseGridColors);
 gridSlider.addEventListener('change', updateGridSize);
+colorPicker.addEventListener('change', colorChange);
 
 //declare initial values
 let divCount = 0;
@@ -37,7 +38,7 @@ for (let i = 1; i <= 16; i++) {
 
 function hoverStart(e){
     let currentHover = e.currentTarget;
-    currentHover.style.backgroundColor = 'red';
+    currentHover.style.backgroundColor = colorPicker.value;
 }
 
 
@@ -85,4 +86,8 @@ function createGrid(){
     mainContainer.style['grid-template-rows'] = `repeat(${gridSlider.value},${960/gridSlider.value}px)`;
    
     
+}
+
+function colorChange(){
+    console.log(colorPicker.value);
 }
